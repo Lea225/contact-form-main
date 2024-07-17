@@ -52,6 +52,9 @@ body {
     font-size: var(--font-size-labels);
     color: var(--grey-900);
 }
+label span{
+    color: var(--green-600);
+}
 .form-group input,
 .form-group textarea{
     padding: 0.5rem 1rem;
