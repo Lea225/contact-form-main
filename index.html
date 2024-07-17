@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <div class="container">
+    <div id="successMessage" aria-live="polite">
+      <p><img src="assets/images/icon-success-check.svg" alt="icon-success-check">Message Sent!</p>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <h1>Contact Us</h1>
+    <form id="contactForm" novalidate>
+      <div class="flex-group">
+        <div class="form-group">
+          <label for="firstName">First Name <span>*</span></label>
+          <input type="text" id="firstName" name="firstName">
+          <span class="error" id="firstNameError" aria-live="polite">This field is required</span>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name <span>*</span></label>
+          <input type="text" id="lastName" name="lastName">
+          <span class="error" id="lastNameError" aria-live="polite">This field is required</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" name="email" aria-required="true">
+        <span class="error" id="emailError" aria-live="polite">Please enter a valid email address</span>
+        <span class="error" id="emailRequiredError" aria-live="polite">This field is required</span>
+      </div>
+      <div class="form-group" id="queryType">
+        <label for="queryType">Query Type <span>*</span></label>
+        <div class="radio-group">
+            <div class="radio-div">
+                <div class="radio-checkbox"></div>
+                <label for="general">General Enquiry</label>
+            </div>
+            <div class="radio-div">
+                <div class="radio-checkbox"></div>
+                <label for="support">Support Request</label>
+            </div>
+        </div>
+        <span class="error" id="queryTypeError" aria-live="polite">Please select a query type</span>
+      </div>      
+      <div class="form-group">
+          <label for="message">Message <span>*</span></label>
+          <textarea id="message" name="message" rows="4" aria-required="true"></textarea>
+          <span class="error" id="messageError" aria-live="polite">This field is required</span>
+      </div>
+      <div class="consent-group">
+        <div class="flex-consent">
+          <div class="checkbox" id="consentCheckbox"></div>
+          <label for="consent">I consent to being contacted by the team <span>*</span></label>
+        </div>
+        <span class="error" id="consentError" aria-live="polite">To submit this form, please consent to being contacted</span>
+      </div>      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
